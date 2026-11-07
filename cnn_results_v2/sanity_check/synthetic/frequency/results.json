@@ -1,0 +1,304 @@
+{
+  "diagnostic": "Synthetic frequency",
+  "training_files": [
+    "synthetic_frequency_000",
+    "synthetic_frequency_001",
+    "synthetic_frequency_002",
+    "synthetic_frequency_003",
+    "synthetic_frequency_004",
+    "synthetic_frequency_005",
+    "synthetic_frequency_006",
+    "synthetic_frequency_007",
+    "synthetic_frequency_008",
+    "synthetic_frequency_009",
+    "synthetic_frequency_010",
+    "synthetic_frequency_011",
+    "synthetic_frequency_012",
+    "synthetic_frequency_013",
+    "synthetic_frequency_014",
+    "synthetic_frequency_015"
+  ],
+  "config": {
+    "dataset": "processed_eeg",
+    "output": "cnn_results_v2",
+    "seed": 42,
+    "epochs": 30,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "patience": 6,
+    "min_delta": 0.0001,
+    "target_rate": 256,
+    "filters": [
+      8,
+      16
+    ],
+    "kernel_sizes": [
+      65,
+      17
+    ],
+    "strides": [
+      4,
+      4
+    ],
+    "dilations": [
+      1,
+      8
+    ],
+    "amplitude_scale_uv": 100.0,
+    "gradient_clip": 1.0,
+    "run_spectral_baseline": true,
+    "baseline_C": 1.0,
+    "baseline_max_iter": 2000,
+    "baseline_bands": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        70,
+        120
+      ]
+    ],
+    "baseline_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "sanity_samples": 16,
+    "sanity_epochs": 500,
+    "sanity_learning_rate": 0.001,
+    "sanity_dropout": 0.0,
+    "sanity_weight_decay": 0.0,
+    "sanity_target_accuracy": 0.95,
+    "synthetic_seconds": 4.0,
+    "synthetic_channels": 4,
+    "synthetic_frequencies_hz": [
+      10.0,
+      80.0
+    ],
+    "synthetic_amplitudes_uv": [
+      25.0,
+      100.0
+    ],
+    "synthetic_noise_fraction": 0.05,
+    "dropout": 0.0,
+    "num_workers": 0,
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "classes": [
+    "low_frequency",
+    "high_frequency"
+  ],
+  "class_counts": {
+    "low_frequency": 8,
+    "high_frequency": 8
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.6923561990261078,
+      "accuracy": 0.5
+    },
+    {
+      "epoch": 2,
+      "loss": 0.6515932828187943,
+      "accuracy": 0.5
+    },
+    {
+      "epoch": 3,
+      "loss": 0.6020443439483643,
+      "accuracy": 0.5625
+    },
+    {
+      "epoch": 4,
+      "loss": 0.5413321256637573,
+      "accuracy": 0.875
+    },
+    {
+      "epoch": 5,
+      "loss": 0.4683728441596031,
+      "accuracy": 1.0
+    }
+  ],
+  "target_reached": true,
+  "predictions": [
+    {
+      "example": "synthetic_frequency_000",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6719706058502197,
+        "high_frequency": 0.32802945375442505
+      }
+    },
+    {
+      "example": "synthetic_frequency_001",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.42708414793014526,
+        "high_frequency": 0.5729158520698547
+      }
+    },
+    {
+      "example": "synthetic_frequency_002",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6700443625450134,
+        "high_frequency": 0.32995572686195374
+      }
+    },
+    {
+      "example": "synthetic_frequency_003",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.4704323410987854,
+        "high_frequency": 0.5295675992965698
+      }
+    },
+    {
+      "example": "synthetic_frequency_004",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6697788238525391,
+        "high_frequency": 0.33022114634513855
+      }
+    },
+    {
+      "example": "synthetic_frequency_005",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.4195276200771332,
+        "high_frequency": 0.5804724097251892
+      }
+    },
+    {
+      "example": "synthetic_frequency_006",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6708942651748657,
+        "high_frequency": 0.32910576462745667
+      }
+    },
+    {
+      "example": "synthetic_frequency_007",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.3974970281124115,
+        "high_frequency": 0.6025030016899109
+      }
+    },
+    {
+      "example": "synthetic_frequency_008",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6692719459533691,
+        "high_frequency": 0.33072802424430847
+      }
+    },
+    {
+      "example": "synthetic_frequency_009",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.42379677295684814,
+        "high_frequency": 0.5762032270431519
+      }
+    },
+    {
+      "example": "synthetic_frequency_010",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6706964373588562,
+        "high_frequency": 0.3293035626411438
+      }
+    },
+    {
+      "example": "synthetic_frequency_011",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.3476380705833435,
+        "high_frequency": 0.6523619294166565
+      }
+    },
+    {
+      "example": "synthetic_frequency_012",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6704803705215454,
+        "high_frequency": 0.3295196294784546
+      }
+    },
+    {
+      "example": "synthetic_frequency_013",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.36613741517066956,
+        "high_frequency": 0.6338626146316528
+      }
+    },
+    {
+      "example": "synthetic_frequency_014",
+      "true_label": "low_frequency",
+      "predicted_label": "low_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.6707744598388672,
+        "high_frequency": 0.3292255699634552
+      }
+    },
+    {
+      "example": "synthetic_frequency_015",
+      "true_label": "high_frequency",
+      "predicted_label": "high_frequency",
+      "correct": true,
+      "probabilities": {
+        "low_frequency": 0.4611484408378601,
+        "high_frequency": 0.5388515591621399
+      }
+    }
+  ]
+}

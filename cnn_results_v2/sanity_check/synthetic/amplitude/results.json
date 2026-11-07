@@ -1,0 +1,294 @@
+{
+  "diagnostic": "Synthetic amplitude",
+  "training_files": [
+    "synthetic_amplitude_000",
+    "synthetic_amplitude_001",
+    "synthetic_amplitude_002",
+    "synthetic_amplitude_003",
+    "synthetic_amplitude_004",
+    "synthetic_amplitude_005",
+    "synthetic_amplitude_006",
+    "synthetic_amplitude_007",
+    "synthetic_amplitude_008",
+    "synthetic_amplitude_009",
+    "synthetic_amplitude_010",
+    "synthetic_amplitude_011",
+    "synthetic_amplitude_012",
+    "synthetic_amplitude_013",
+    "synthetic_amplitude_014",
+    "synthetic_amplitude_015"
+  ],
+  "config": {
+    "dataset": "processed_eeg",
+    "output": "cnn_results_v2",
+    "seed": 42,
+    "epochs": 30,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "patience": 6,
+    "min_delta": 0.0001,
+    "target_rate": 256,
+    "filters": [
+      8,
+      16
+    ],
+    "kernel_sizes": [
+      65,
+      17
+    ],
+    "strides": [
+      4,
+      4
+    ],
+    "dilations": [
+      1,
+      8
+    ],
+    "amplitude_scale_uv": 100.0,
+    "gradient_clip": 1.0,
+    "run_spectral_baseline": true,
+    "baseline_C": 1.0,
+    "baseline_max_iter": 2000,
+    "baseline_bands": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        70,
+        120
+      ]
+    ],
+    "baseline_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "sanity_samples": 16,
+    "sanity_epochs": 500,
+    "sanity_learning_rate": 0.001,
+    "sanity_dropout": 0.0,
+    "sanity_weight_decay": 0.0,
+    "sanity_target_accuracy": 0.95,
+    "synthetic_seconds": 4.0,
+    "synthetic_channels": 4,
+    "synthetic_frequencies_hz": [
+      10.0,
+      80.0
+    ],
+    "synthetic_amplitudes_uv": [
+      25.0,
+      100.0
+    ],
+    "synthetic_noise_fraction": 0.05,
+    "dropout": 0.0,
+    "num_workers": 0,
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "classes": [
+    "low_amplitude",
+    "high_amplitude"
+  ],
+  "class_counts": {
+    "low_amplitude": 8,
+    "high_amplitude": 8
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.6094107180833817,
+      "accuracy": 0.5
+    },
+    {
+      "epoch": 2,
+      "loss": 0.6023400723934174,
+      "accuracy": 0.5
+    },
+    {
+      "epoch": 3,
+      "loss": 0.5959012061357498,
+      "accuracy": 1.0
+    }
+  ],
+  "target_reached": true,
+  "predictions": [
+    {
+      "example": "synthetic_amplitude_000",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5973315834999084,
+        "high_amplitude": 0.40266844630241394
+      }
+    },
+    {
+      "example": "synthetic_amplitude_001",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.49177277088165283,
+        "high_amplitude": 0.5082272291183472
+      }
+    },
+    {
+      "example": "synthetic_amplitude_002",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5978471636772156,
+        "high_amplitude": 0.40215277671813965
+      }
+    },
+    {
+      "example": "synthetic_amplitude_003",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4916919469833374,
+        "high_amplitude": 0.5083079934120178
+      }
+    },
+    {
+      "example": "synthetic_amplitude_004",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5972808003425598,
+        "high_amplitude": 0.4027192294597626
+      }
+    },
+    {
+      "example": "synthetic_amplitude_005",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4913376569747925,
+        "high_amplitude": 0.5086623430252075
+      }
+    },
+    {
+      "example": "synthetic_amplitude_006",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5981613993644714,
+        "high_amplitude": 0.40183860063552856
+      }
+    },
+    {
+      "example": "synthetic_amplitude_007",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.49275195598602295,
+        "high_amplitude": 0.5072481036186218
+      }
+    },
+    {
+      "example": "synthetic_amplitude_008",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5982393026351929,
+        "high_amplitude": 0.4017607569694519
+      }
+    },
+    {
+      "example": "synthetic_amplitude_009",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4917472302913666,
+        "high_amplitude": 0.5082527995109558
+      }
+    },
+    {
+      "example": "synthetic_amplitude_010",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5976970791816711,
+        "high_amplitude": 0.40230289101600647
+      }
+    },
+    {
+      "example": "synthetic_amplitude_011",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4922066032886505,
+        "high_amplitude": 0.5077933669090271
+      }
+    },
+    {
+      "example": "synthetic_amplitude_012",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.597980260848999,
+        "high_amplitude": 0.40201976895332336
+      }
+    },
+    {
+      "example": "synthetic_amplitude_013",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4920351505279541,
+        "high_amplitude": 0.5079647898674011
+      }
+    },
+    {
+      "example": "synthetic_amplitude_014",
+      "true_label": "low_amplitude",
+      "predicted_label": "low_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.5973586440086365,
+        "high_amplitude": 0.4026413857936859
+      }
+    },
+    {
+      "example": "synthetic_amplitude_015",
+      "true_label": "high_amplitude",
+      "predicted_label": "high_amplitude",
+      "correct": true,
+      "probabilities": {
+        "low_amplitude": 0.4921466112136841,
+        "high_amplitude": 0.5078533291816711
+      }
+    }
+  ]
+}

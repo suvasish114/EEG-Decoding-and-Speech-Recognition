@@ -1,0 +1,17 @@
+example,true_label,predicted_label,correct,p_music,p_speech
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-01_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz,music,music,True,0.9722456932067871,0.027754249051213264
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-13_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0012.npz,speech,speech,True,0.006787825375795364,0.993212103843689
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-50_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0014.npz,speech,speech,True,0.00100501358974725,0.9989950060844421
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-16_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0003.npz,music,music,True,0.9920322895050049,0.007967699319124222
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-24_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0003.npz,music,music,True,0.818009078502655,0.18199090659618378
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-21_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0005.npz,music,music,True,0.9990074038505554,0.0009926315397024155
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-21_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz,music,music,True,0.9448879957199097,0.05511196330189705
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-55_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0010.npz,speech,speech,True,0.0011701444163918495,0.9988299012184143
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-43_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0006.npz,speech,speech,True,0.013778825290501118,0.986221194267273
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-14_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0008.npz,speech,speech,True,0.494945764541626,0.5050542950630188
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-55_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0008.npz,speech,speech,True,0.0098414933308959,0.9901584982872009
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-40_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0006.npz,speech,speech,True,0.016096778213977814,0.983903169631958
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-48_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0003.npz,music,music,True,0.9647088050842285,0.03529118001461029
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-34_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0004.npz,speech,speech,True,0.000986497732810676,0.9990134239196777
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-40_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0007.npz,music,music,True,0.9831852316856384,0.016814837232232094
+/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-14_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0003.npz,music,music,True,0.9529792070388794,0.04702082648873329

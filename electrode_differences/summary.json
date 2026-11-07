@@ -1,0 +1,432 @@
+{
+  "contrast": "speech minus music; music is the acoustic comparator",
+  "analysis": "exploratory, all corpus splits combined; not classifier evaluation",
+  "fdr_family": "all electrode-band tests within participant",
+  "assumptions": "sign-flip tests assume independent exchangeable paired contrasts; fixed stimulus order and temporal dependence limit inference",
+  "args": {
+    "dataset": "/Users/papai/Documents/NAI-A5/processed_eeg",
+    "bids": "/Users/papai/Documents/NAI-A5/ds003688",
+    "output": "/Users/papai/Documents/NAI-A5/electrode_differences",
+    "min_pairs": 3,
+    "permutations": 10000,
+    "line_frequency": 50,
+    "alpha": 0.05,
+    "seed": 42
+  },
+  "coordinate_metadata": {
+    "sub-02": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-02/ses-mri3t/anat/sub-02_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-10": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-10/ses-mri3t/anat/sub-10_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-12": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-12/ses-mri3t/anat/sub-12_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-19": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-19/ses-mri3t/anat/sub-19_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-20": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-20/ses-mri3t/anat/sub-20_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-22": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-22/ses-mri3t/anat/sub-22_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-49": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-49/ses-mri3t/anat/sub-49_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-59": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-59/ses-mri3t/anat/sub-59_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-01": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-01/ses-mri3t/anat/sub-01_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-05": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-05/ses-mri3t/anat/sub-05_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-06": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-06/ses-mri3t/anat/sub-06_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-13": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-13/ses-mri3t/anat/sub-13_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-14": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-14/ses-mri3t/anat/sub-14_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-16": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-16/ses-mri3t/anat/sub-16_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-17": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-17/ses-mri3t/anat/sub-17_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-18": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-18/ses-mri3t/anat/sub-18_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-21": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-21/ses-mri3t/anat/sub-21_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-23": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-23/ses-mri3t/anat/sub-23_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-24": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-24/ses-mri3t/anat/sub-24_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-25": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-25/ses-mri3t/anat/sub-25_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-26": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-26/ses-mri3t/anat/sub-26_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-27": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-27/ses-mri3t/anat/sub-27_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-28": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-28/ses-mri3t/anat/sub-28_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-30": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-30/ses-7t1/anat/sub-30_ses-7t1_run-1_T1w.nii.gz"
+    },
+    "sub-31": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-31/ses-mri3t/anat/sub-31_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-32": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-32/ses-mri3t/anat/sub-32_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-34": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-34/ses-mri3t/anat/sub-34_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-36": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-36/ses-mri3t/anat/sub-36_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-37": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-37/ses-mri3t/anat/sub-37_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-38": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-38/ses-mri3t/anat/sub-38_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-39": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-39/ses-mri3t/anat/sub-39_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-40": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-40/ses-mri3t/anat/sub-40_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-42": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-42/ses-mri3t/anat/sub-42_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-43": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-43/ses-mri3t/anat/sub-43_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-46": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-46/ses-mri3t/anat/sub-46_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-48": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-48/ses-mri3t/anat/sub-48_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-50": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-50/ses-mri3t/anat/sub-50_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-51": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-51/ses-mri3t/anat/sub-51_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-54": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-54/ses-mri3t/anat/sub-54_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-55": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-55/ses-mri3t/anat/sub-55_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-57": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-57/ses-mri3t/anat/sub-57_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-58": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-58/ses-mri3t/anat/sub-58_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-61": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-61/ses-mri3t/anat/sub-61_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-03": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-03/ses-mri3t/anat/sub-03_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-07": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-07/ses-mri3t/anat/sub-07_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-09": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-09/ses-mri3t/anat/sub-09_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-33": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-33/ses-mri3t/anat/sub-33_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-41": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-41/ses-mri3t/anat/sub-41_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-45": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-45/ses-mri3t/anat/sub-45_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-60": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-60/ses-mri3t/anat/sub-60_ses-mri3t_run-1_T1w.nii.gz"
+    },
+    "sub-63": {
+      "iEEGCoordinateSystem": "ACPC",
+      "iEEGCoordinateUnits": "mm",
+      "iEEGCoordinateProcessingDescription": "surface_projection",
+      "iEEGCoordinateProcessingReference": "PMID: 19836416",
+      "IntendedFor": "/sub-63/ses-mri3t/anat/sub-63_ses-mri3t_run-1_T1w.nii.gz"
+    }
+  },
+  "excluded": [],
+  "unpaired_files": [
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-01_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-02_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-03_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-05_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-06_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-07_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-09_ses-iemu_task-film_acq-clinical_run-2_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-10_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-12_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-13_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-14_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-16_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-17_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-18_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-19_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-20_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-21_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-22_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-23_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-24_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-25_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-26_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-27_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-28_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-30_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-31_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-32_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-33_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-34_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-36_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-37_ses-iemu_task-film_acq-clinical_run-2_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-38_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-39_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-40_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-41_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-42_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-43_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-45_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-46_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-48_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-49_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-50_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-51_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-54_ses-iemu_task-film_acq-clinical_run-2_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-55_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-57_ses-iemu_task-film_acq-clinical_run-2_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-58_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/test/sub-59_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-60_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/train/sub-61_ses-iemu_task-film_acq-clinical_run-1_ieeg_event-0015.npz",
+    "/Users/papai/Documents/NAI-A5/processed_eeg/validation/sub-63_ses-iemu_task-film_acq-clinical_run-2_ieeg_event-0015.npz"
+  ],
+  "unmatched_channels": 0,
+  "tested_hypotheses": 25140,
+  "significant_hypotheses": 0
+}

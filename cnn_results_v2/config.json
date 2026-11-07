@@ -1,0 +1,85 @@
+{
+  "dataset": "processed_eeg",
+  "output": "cnn_results_v2",
+  "seed": 42,
+  "epochs": 300,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.001,
+  "patience": 30,
+  "min_delta": 1e-05,
+  "target_rate": 256,
+  "filters": [
+    8,
+    16
+  ],
+  "kernel_sizes": [
+    65,
+    17
+  ],
+  "strides": [
+    4,
+    4
+  ],
+  "dilations": [
+    1,
+    8
+  ],
+  "amplitude_scale_uv": 100.0,
+  "gradient_clip": 1.0,
+  "run_spectral_baseline": true,
+  "baseline_C": 1.0,
+  "baseline_max_iter": 2000,
+  "baseline_bands": [
+    [
+      1,
+      4
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      13
+    ],
+    [
+      13,
+      30
+    ],
+    [
+      30,
+      70
+    ],
+    [
+      70,
+      120
+    ]
+  ],
+  "baseline_quantiles": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "sanity_samples": 16,
+  "sanity_epochs": 500,
+  "sanity_learning_rate": 0.001,
+  "sanity_dropout": 0.0,
+  "sanity_weight_decay": 0.0,
+  "sanity_target_accuracy": 0.95,
+  "synthetic_seconds": 4.0,
+  "synthetic_channels": 4,
+  "synthetic_frequencies_hz": [
+    10.0,
+    80.0
+  ],
+  "synthetic_amplitudes_uv": [
+    25.0,
+    100.0
+  ],
+  "synthetic_noise_fraction": 0.05,
+  "dropout": 0.3,
+  "num_workers": 0,
+  "cpu_threads": 4,
+  "device": "cpu"
+}
